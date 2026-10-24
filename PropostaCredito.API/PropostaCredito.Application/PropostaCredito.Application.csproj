@@ -7,9 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Common\" />
     <Folder Include="Services\Implementations\" />
     <Folder Include="Services\Interface\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PropostaCredito.Core\PropostaCredito.Core.csproj" />
   </ItemGroup>
 
 </Project>
