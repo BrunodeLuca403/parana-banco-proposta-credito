@@ -15,10 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
-  <ItemGroup>
+    <ProjectReference Include="..\PropostaCredito.Application\PropostaCredito.Application.csproj" />
     <ProjectReference Include="..\PropostaCredito.Infrastructure\PropostaCredito.Infrastructure.csproj" />
   </ItemGroup>
 
