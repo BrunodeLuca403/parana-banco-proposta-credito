@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="PropostaCredito.API/PropostaCredito.API.csproj" />
+  <Project Path="PropostaCredito.Application/PropostaCredito.Application.csproj" />
+  <Project Path="PropostaCredito.Core/PropostaCredito.Core.csproj" />
+  <Project Path="PropostaCredito.Infrastructure/PropostaCredito.Infrastructure.csproj" />
+</Solution>
