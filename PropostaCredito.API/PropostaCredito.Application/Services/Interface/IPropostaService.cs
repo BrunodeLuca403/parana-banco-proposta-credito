@@ -1,5 +1,6 @@
 ﻿using PropostaCredito.Application.Common;
 using PropostaCredito.Application.DTOs;
+using PropostaCredito.Core.Events;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -10,6 +11,6 @@ namespace PropostaCredito.Application.Services.Interface
     {
         Task<ResultViewModel<PropostaResponse>> GerarProposta(GerarPropostaRequest request);
         Task<ResultViewModel<PropostaResponse?>> ObterPropostaClienteAsync(Guid clienteId);
-
+        Task ProcessarClienteCadastradoAsync(ClienteCadastradoEvent evento, CancellationToken cancellationToken = default);
     }
 }

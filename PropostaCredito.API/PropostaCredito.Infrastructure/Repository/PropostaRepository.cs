@@ -11,6 +11,12 @@ namespace PropostaCredito.Infrastructure.Repository
     public class PropostaRepository : IPropostaRepository
     {
         private readonly PropostaDbContext _db;
+
+        public PropostaRepository(PropostaDbContext db)
+        {
+            _db = db;
+        }
+
         public async Task<Proposta?> BuscarProposta(Guid ClientId)
         {
             return await _db.Propostas.SingleOrDefaultAsync(p => p.IdCliente == ClientId);
