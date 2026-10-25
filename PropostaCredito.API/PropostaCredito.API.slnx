@@ -3,4 +3,5 @@
   <Project Path="PropostaCredito.Application/PropostaCredito.Application.csproj" />
   <Project Path="PropostaCredito.Core/PropostaCredito.Core.csproj" />
   <Project Path="PropostaCredito.Infrastructure/PropostaCredito.Infrastructure.csproj" />
+  <Project Path="PropostaCredito.Tests/PropostaCredito.Tests.csproj" />
 </Solution>
