@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using PropostaCredito.Application.Common;
 using PropostaCredito.Application.DTOs;
 using PropostaCredito.Application.Services.Interface;
 
@@ -16,14 +17,20 @@ namespace PropostaCredito.API.Controllers
         }
 
         [HttpGet("{id:guid}")]
-        public async Task<ActionResult<PropostaResponse>> ObterPropostaCliente([FromRoute] Guid id)
+        public async Task<ActionResult<ResultViewModel<PropostaResponse?>>> ObterPropostaCliente([FromRoute] Guid id)
         {
             var proposta = await _propostaService.ObterPropostaClienteAsync(id);
+
             if (!proposta.IsSuccess)
             {
-                return NotFound(proposta.Error);
+                return ResultViewModel<PropostaResponse?>.Failure(
+                  Error.NotFound(
+                      "PropostaCredito.API.Controllers.ObterPropostaCliente",
+                      $"Cliente com Id {proposta} não encontrado"));
             }
-            return Ok(proposta.Value);
+           
+
+            return ResultViewModel<PropostaResponse?>.Success(proposta.Value);
         }
     }
 }
