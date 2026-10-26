@@ -3,16 +3,7 @@ using PropostaCredito.Core.Enum;
 
 namespace PropostaCredito.Tests
 {
-    // Regra de negócio central do desafio: a conversão do score em status, limite
-    // por cartão e quantidade de cartões (Proposta.Criar).
-    //
-    // Tabela do case:
-    //   0   – 100  -> Negado,   limite 0,     0 cartões
-    //   101 – 500  -> Aprovado, limite 1.000, 1 cartão
-    //   501 – 1000 -> Aprovado, limite 5.000, 2 cartões
-    //
-    // Foco em valores de FRONTEIRA (0,100,101,500,501,1000), onde bugs de
-    // comparação se escondem.
+
     public class PropostaTests
     {
         private static readonly Guid ClienteId = Guid.NewGuid();
